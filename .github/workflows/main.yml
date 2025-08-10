@@ -52,6 +52,10 @@ jobs:
           cli-version: "latest"
           default-config-file-path: "config.toml"
 
+      # Add authentication step for Snowflake
+      - name: Authenticate to Snowflake
+        run: snow connection authenticator = "username_password_mfa"
+
       # Fetch latest changes from the repository to Snowflake
       - name: Fetch latest changes to Snowflake
         run: snow git fetch course_repo.public.advanced_data_engineering_snowflake
