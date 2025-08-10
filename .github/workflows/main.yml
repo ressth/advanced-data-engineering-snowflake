@@ -54,7 +54,7 @@ jobs:
 
       # Fetch latest changes from the repository to Snowflake
       - name: Fetch latest changes to Snowflake
-        run: snow git fetch --authenticator = "username_password_mfa" course_repo.public.advanced_data_engineering_snowflake
+        run: snow git fetch course_repo.public.advanced_data_engineering_snowflake --authenticator = "username_password_mfa"
 
       # Deploy templates to the data environment -
       - name: Deploy templates to data environment
